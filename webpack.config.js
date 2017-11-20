@@ -12,6 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, "bundledOutputs"),
     filename: "[name].js"
   },
+  watch: true,
   devServer: {
     contentBase: "./bundledOutputs"
   },
@@ -20,6 +21,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "src/index.html"
     }),
+    // new HtmlWebpackPlugin({
+    //   template: "src/artist.html"
+    // }),
+    // new HtmlWebpackPlugin({
+    //   template: "src/player.html"
+    // }),
     new ExtractTextPlugin("styles.css")
   ],
   module: {
@@ -34,11 +41,7 @@ module.exports = {
             {
               loader: "css-loader",
               options: {
-                minimize:
-                  true ||
-                  {
-                    /* CSSNano Options */
-                  }
+                minimize: true
               }
             },
             {

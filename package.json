@@ -1,5 +1,5 @@
 {
-  "name": "with-reason-cssgrid-photos",
+  "name": "with-reason-cssgrid-music",
   "private": true,
   "version": "0.1.0",
   "description": "css-grid images with reasonml demo",
@@ -13,7 +13,8 @@
   "keywords": [
     "reason",
     "css-grid",
-    "reason-react"
+    "reason-react",
+    "sass"
   ],
   "author": "Alain Armand <aarmand.inbox@gmail.com>",
   "license": "ISC",
