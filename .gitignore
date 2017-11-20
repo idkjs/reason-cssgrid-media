@@ -1,1 +1,7 @@
+node_modules
+lib/*
+.merlin
+lib/bs/.bsbuild
+lib/bs/.bsdeps
+lib/bs/.ninja_log
 .DS_Store
