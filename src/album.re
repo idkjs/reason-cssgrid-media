@@ -1,4 +1,4 @@
-let component = ReasonReact.statelessComponent("Main");
+let component = ReasonReact.statelessComponent("Album");
 
 let ste = ReasonReact.stringToElement;
 
