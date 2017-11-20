@@ -18,10 +18,9 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(["bundledOutputs"]),
     new HtmlWebpackPlugin({
-      title: "ReasonML CSS-GRID",
       template: "src/index.html"
     }),
-    new ExtractTextPlugin("style.css")
+    new ExtractTextPlugin("styles.css")
   ],
   module: {
     rules: [
