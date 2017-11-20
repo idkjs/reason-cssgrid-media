@@ -6,7 +6,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
   entry: {
     root: "./src/index.re",
-    css: "./sass/styles.scss"
+    css: "./scss/styles.scss"
   },
   output: {
     path: path.resolve(__dirname, "bundledOutputs"),
