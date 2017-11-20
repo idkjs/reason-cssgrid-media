@@ -1,52 +1,72 @@
 let component = ReasonReact.statelessComponent("Main");
 
-[@bs.module] external hotel : string = "../images/hotel.jpg";
+[@bs.module] external a_beach200 : string = "../images/a_beach200.jpg";
 
-[@bs.module] external divorce : string = "../images/divorce.jpg";
-
-[@bs.module] external room2 : string = "../images/room2.jpg";
-
-[@bs.module] external story1 : string = "../images/story1.jpg";
-
-[@bs.module] external story2 : string = "../images/story2.jpg";
-
-[@bs.module] external story3 : string = "../images/story3.jpg";
-
-[@bs.module] external story4 : string = "../images/story4.jpg";
+[@bs.module] external beach200ss : string =
+  "../images/a_beach200.jpg 1x, ../images/a_beach400.jpg 2x";
 
 let ste = ReasonReact.stringToElement;
 
 let make = (_children) => {
   ...component,
   render: (_self) =>
-    <main className="clearfix">
-      <div className="teaser lead">
-        <img src=hotel alt="" />
-        <span> (ste("Virtual Hotel Service Announced")) </span>
-      </div>
-      <div className="teaser secondTop">
-        <img src=divorce alt="" />
-        <span> (ste("Declining Divorce Rates Suprise Researchers")) </span>
-      </div>
-      <div className="teaser secondBot">
-        <img src=room2 alt="" />
-        <span> (ste("Hotel Gets Facelift")) </span>
-      </div>
-      <div className="teaser ie1">
-        <img src=story1 alt="" />
-        <span> (ste("Roaring 20's Hotel Reopens")) </span>
-      </div>
-      <div className="teaser ie2">
-        <img src=story2 alt="" />
-        <span> (ste("Auto Recall Stuns Owners")) </span>
-      </div>
-      <div className="teaser ie3">
-        <img src=story3 alt="" />
-        <span> (ste("Politician Behind Bars")) </span>
-      </div>
-      <div className="teaser ie4">
-        <img src=story4 alt="" />
-        <span> (ste("New WIFI in Airports")) </span>
-      </div>
+    <main className="album">
+      <figure>
+        <a href="player.html">
+           <img src=a_beach200 /> </a>
+          /* <img src=a_beach200 srcset=beach200ss /> */
+        <figcaption> (ste("On the Beach")) </figcaption>
+      </figure>
+      <Nav />
     </main>
+  /* <figure>
+         <a href="player.html">
+             <img src="images/a_girl200.jpg" srcset="images/a_girl200.jpg 1x, images/a_girl400.jpg 2x">
+         </a>
+         <figcaption>Young Hearts</figcaption>
+     </figure>
+
+     <figure>
+         <a href="player.html">
+             <img src="images/a_paint200.jpg" srcset="images/a_paint200.jpg 1x, images/a_paint400.jpg 2x">
+         </a>
+         <figcaption>In the Corner</figcaption>
+     </figure>
+
+
+     <figure>
+         <a href="player.html">
+             <img src="images/a_pink200.jpg" srcset="images/a_pink200.jpg 1x, images/a_pink400.jpg 2x">
+         </a>
+         <figcaption>Pretty in Pink</figcaption>
+     </figure>
+
+
+     <figure>
+         <a href="player.html">
+             <img src="images/a_sad200.jpg" srcset="images/a_sad200.jpg 1x, images/a_sad400.jpg 2x">
+         </a>
+         <figcaption>Reflections</figcaption>
+     </figure>
+
+     <figure>
+         <a href="player.html">
+             <img src="images/a_rain200.jpg" srcset="images/a_rain200.jpg 1x, images/a_rain400.jpg 2x">
+         </a>
+         <figcaption>Looking Up</figcaption>
+     </figure>
+
+     <figure>
+         <a href="player.html">
+             <img src="images/a_search200.jpg" srcset="images/a_search200.jpg 1x, images/a_search400.jpg 2x">
+         </a>
+         <figcaption>Looking for You</figcaption>
+     </figure>
+
+     <figure>
+         <a href="player.html">
+             <img src="images/a_wheel200.jpg" srcset="images/a_wheel200.jpg 1x, images/a_wheel400.jpg 2x">
+         </a>
+         <figcaption>Riding Away</figcaption>
+     </figure> */
 };
