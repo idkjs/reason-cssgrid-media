@@ -21,12 +21,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "src/index.html"
     }),
-    // new HtmlWebpackPlugin({
-    //   template: "src/artist.html"
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: "src/player.html"
-    // }),
     new ExtractTextPlugin("styles.css")
   ],
   module: {
