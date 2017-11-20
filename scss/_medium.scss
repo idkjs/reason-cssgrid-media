@@ -1,0 +1,24 @@
+/* MAIN ALBUM */
+main.album {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+} // end main.album medium
+
+/* MAIN ARTIST
+change column grid in this version so it spreads across
+screen
+*/
+
+main.artist {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* main player landscape g-t-areas */
+main.player {
+  grid-template-columns: 50% 50px auto 50px;
+  grid-template-rows: auto;
+  /* the first word in each of these indicates 
+a combined column. 
+*/
+  grid-template-areas: "photo startTime time endTime" "photo title title title"
+    "photo prev play next" "photo dn vol up";
+}

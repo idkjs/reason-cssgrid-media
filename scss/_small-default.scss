@@ -1,0 +1,198 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*  apply a natural box layout model to all elements  */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: $defaultFont;
+  font-weight: $normal;
+  color: $text;
+  background-color: #fff;
+}
+
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  background-color: $primary;
+  color: white;
+  padding: 0.5rem $gutter;
+  font-size: 1.5rem;
+}
+
+nav {
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  border-top: 1px solid $dkgrey;
+  display: flex;
+
+  div {
+    flex-basis: 25%;
+    text-align: center;
+  }
+  div a {
+    display: block;
+    font-size: 1.7rem;
+    padding: 0.5rem 0;
+    color: $ltgrey;
+  }
+  div.active a {
+    background-color: $primary;
+    color: white;
+  } // end active
+}
+
+/* MAIN ALBUM */
+main.album {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+
+  figure {
+    padding: 0.7rem 2vw;
+  }
+  figure img {
+    width: 100%;
+  }
+  figure figcaption {
+    text-align: center;
+    padding: 2rem 0;
+  }
+} // end main.album
+
+/* MAIN PADDING - add padding to footer nav so the
+ last item will show fully. This property is set on main
+ generally so will affect all 3 main. pages.
+*/
+
+main {
+  padding-bottom: 2.75rem;
+}
+/* MAIN ALBUM  using sass nesting*/
+main.artist {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+
+  section {
+    display: grid;
+    grid-template-columns: 80px auto;
+    margin: 0.75rem 5%;
+
+    div img {
+      width: 100%;
+      clip-path: circle(40px at center);
+      -webkit-clip-path: circle(40px at center);
+    } // end image
+    div:nth-child(2) {
+      align-self: center; // center text top to bottom
+      padding-left: 5%; // padding so text doesnt touch photo
+    } // end child
+  } // end section
+} // end main.artist
+
+/* MAIN Player using sass nesting*/
+// set grid template areas assigning a value to each column/row
+// assign div to named areas
+
+main.player {
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  grid-auto-rows: auto;
+
+  grid-template-areas: "photo photo photo" "time time time"
+    "startTime empty endTime" "title title title" "prev play next" "dn vol up";
+  margin-top: 1.5rem;
+
+  div.photo {
+    grid-area: photo;
+  }
+  div.photo img {
+    width: 84%;
+    margin: 0 0 0.5rem 8%;
+    border-radius: 20px;
+  }
+
+  div.time {
+    grid-area: time;
+    justify-self: center;
+    width: 84%;
+  }
+  // make div time bar acroos screen
+  div.time input {
+    width: 100%;
+  }
+  div.startTime {
+    grid-area: startTime;
+    text-align: right;
+  }
+  div.endTime {
+    grid-area: endTime;
+  }
+
+  // set title span to display as block and align to center
+  // take first span, set font and padding
+  div.title {
+    grid-area: title;
+    span {
+      display: block;
+      text-align: center;
+    }
+    span:nth-child(1) {
+      font-size: 1.5rem;
+      padding: 1rem 0 0.3rem 0;
+    }
+    /* set second span for subheading*/
+    span:nth-child(2) {
+      font-size: 1.2rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  div.previous {
+    grid-area: prev;
+    justify-self: end;
+    font-size: 1.5rem;
+  }
+  div.play {
+    grid-area: play;
+    justify-self: center; //center is the default
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  div.next {
+    grid-area: next;
+    justify-self: start;
+    font-size: 1.5rem;
+  }
+
+  div.voldn {
+    grid-area: dn;
+    justify-self: center;
+  }
+  div.volume {
+    grid-area: vol;
+  }
+  // set div input to 100%
+  div.volume input {
+    width: 100%;
+  }
+  div.volup {
+    grid-area: up;
+    justify-self: center;
+  }
+} // end main.player
