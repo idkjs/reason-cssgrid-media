@@ -1,0 +1,3 @@
+type routes =
+  | Album
+  | Artist;

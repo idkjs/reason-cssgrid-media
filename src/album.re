@@ -34,41 +34,44 @@ let searchsrc = {j|$search ++ " 1x, " ++ $search ++ " 2x"|j};
 
 let wheelsrc = {j|$wheel ++ " 1x, " ++ $wheel ++ " 2x"|j};
 
-let make = (_children) => {
+let make = (~router, _children) => {
   ...component,
   render: (_self) =>
-    <main className="album">
-      <figure>
-        <a href="player.html"> <img src=beach srcSet=beachsrc /> </a>
-        <figcaption> (ste("On the Beach")) </figcaption>
-      </figure>
-      <figure>
-        <a href="player.html"> <img src=girl srcSet=girlsrc /> </a>
-        <figcaption> (ste("Young Hearts")) </figcaption>
-      </figure>
-      <figure>
-        <a href="player.html"> <img src=paint srcSet=paintsrc /> </a>
-        <figcaption> (ste("In the Corner")) </figcaption>
-      </figure>
-      <figure>
-        <a href="player.html"> <img src=pink srcSet=pinksrc /> </a>
-        <figcaption> (ste("Pretty in Pink")) </figcaption>
-      </figure>
-      <figure>
-        <a href="player.html"> <img src=sad srcSet=sadsrc /> </a>
-        <figcaption> (ste("Reflections")) </figcaption>
-      </figure>
-      <figure>
-        <a href="player.html"> <img src=rain srcSet=rainsrc /> </a>
-        <figcaption> (ste("Looking Up")) </figcaption>
-      </figure>
-      <figure>
-        <a href="player.html"> <img src=search srcSet=searchsrc /> </a>
-        <figcaption> (ste("Looking for You")) </figcaption>
-      </figure>
-      <figure>
-        <a href="player.html"> <img src=wheel srcSet=wheelsrc /> </a>
-        <figcaption> (ste("Riding Away")) </figcaption>
-      </figure>
-    </main>
+    <div>
+      <Nav router />
+      <main className="album">
+        <figure>
+          <a href="player.html"> <img src=beach srcSet=beachsrc /> </a>
+          <figcaption> (ste("On the Beach")) </figcaption>
+        </figure>
+        <figure>
+          <a href="player.html"> <img src=girl srcSet=girlsrc /> </a>
+          <figcaption> (ste("Young Hearts")) </figcaption>
+        </figure>
+        <figure>
+          <a href="player.html"> <img src=paint srcSet=paintsrc /> </a>
+          <figcaption> (ste("In the Corner")) </figcaption>
+        </figure>
+        <figure>
+          <a href="player.html"> <img src=pink srcSet=pinksrc /> </a>
+          <figcaption> (ste("Pretty in Pink")) </figcaption>
+        </figure>
+        <figure>
+          <a href="player.html"> <img src=sad srcSet=sadsrc /> </a>
+          <figcaption> (ste("Reflections")) </figcaption>
+        </figure>
+        <figure>
+          <a href="player.html"> <img src=rain srcSet=rainsrc /> </a>
+          <figcaption> (ste("Looking Up")) </figcaption>
+        </figure>
+        <figure>
+          <a href="player.html"> <img src=search srcSet=searchsrc /> </a>
+          <figcaption> (ste("Looking for You")) </figcaption>
+        </figure>
+        <figure>
+          <a href="player.html"> <img src=wheel srcSet=wheelsrc /> </a>
+          <figcaption> (ste("Riding Away")) </figcaption>
+        </figure>
+      </main>
+    </div>
 };

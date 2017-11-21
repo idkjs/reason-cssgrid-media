@@ -14,33 +14,36 @@ let ste = ReasonReact.stringToElement;
 
 let component = ReasonReact.statelessComponent("Artist");
 
-let make = (_children) => {
+let make = (~router, _children) => {
   ...component,
   render: (_self) =>
-    <main className="artist">
-      <section>
-        <div> <a href="player.html"> <img src=andrea /> </a> </div>
-        <div> (ste("Andrea Reys")) </div>
-      </section>
-      <section>
-        <div> <a href="player.html"> <img src=clara /> </a> </div>
-        <div> (ste("Brenda Bache")) </div>
-      </section>
-      <section>
-        <div> <a href="player.html"> <img src=jen /> </a> </div>
-        <div> (ste("Clara Stoneman")) </div>
-      </section>
-      <section>
-        <div> <a href="player.html"> <img src=jordan /> </a> </div>
-        <div> (ste("Dory Jensen")) </div>
-      </section>
-      <section>
-        <div> <a href="player.html"> <img src=rey /> </a> </div>
-        <div> (ste("Erica Marlay")) </div>
-      </section>
-      <section>
-        <div> <a href="player.html"> <img src=sally /> </a> </div>
-        <div> (ste("Fanny Dylan")) </div>
-      </section>
-    </main>
+    <div>
+      <Nav router />
+      <main className="artist">
+        <section>
+          <div> <a href="player.html"> <img src=andrea /> </a> </div>
+          <div> (ste("Andrea Reys")) </div>
+        </section>
+        <section>
+          <div> <a href="player.html"> <img src=clara /> </a> </div>
+          <div> (ste("Brenda Bache")) </div>
+        </section>
+        <section>
+          <div> <a href="player.html"> <img src=jen /> </a> </div>
+          <div> (ste("Clara Stoneman")) </div>
+        </section>
+        <section>
+          <div> <a href="player.html"> <img src=jordan /> </a> </div>
+          <div> (ste("Dory Jensen")) </div>
+        </section>
+        <section>
+          <div> <a href="player.html"> <img src=rey /> </a> </div>
+          <div> (ste("Erica Marlay")) </div>
+        </section>
+        <section>
+          <div> <a href="player.html"> <img src=sally /> </a> </div>
+          <div> (ste("Fanny Dylan")) </div>
+        </section>
+      </main>
+    </div>
 };
