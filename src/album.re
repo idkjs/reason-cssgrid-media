@@ -2,21 +2,21 @@ let component = ReasonReact.statelessComponent("Album");
 
 let ste = ReasonReact.stringToElement;
 
-[@bs.module] external beach : string = "../images/a_beach200.jpg";
+[@bs.module] external beach : string = "./assets/images/a_beach200.jpg";
 
-[@bs.module] external girl : string = "../images/a_girl200.jpg";
+[@bs.module] external girl : string = "./assets/images/a_girl200.jpg";
 
-[@bs.module] external paint : string = "../images/a_paint200.jpg";
+[@bs.module] external paint : string = "./assets/images/a_paint200.jpg";
 
-[@bs.module] external pink : string = "../images/a_pink200.jpg";
+[@bs.module] external pink : string = "./assets/images/a_pink200.jpg";
 
-[@bs.module] external sad : string = "../images/a_sad200.jpg";
+[@bs.module] external sad : string = "./assets/images/a_sad200.jpg";
 
-[@bs.module] external rain : string = "../images/a_rain200.jpg";
+[@bs.module] external rain : string = "./assets/images/a_rain200.jpg";
 
-[@bs.module] external search : string = "../images/a_search200.jpg";
+[@bs.module] external search : string = "./assets/images/a_search200.jpg";
 
-[@bs.module] external wheel : string = "../images/a_wheel200.jpg";
+[@bs.module] external wheel : string = "./assets/images/a_wheel200.jpg";
 
 let beachsrc = {j|$beach ++ " 1x, " ++ $beach ++ " 2x"|j};
 

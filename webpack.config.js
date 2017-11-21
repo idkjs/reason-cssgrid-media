@@ -6,7 +6,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
   entry: {
     root: "./src/index.re",
-    css: "./scss/styles.scss"
+    static: ["./src/assets/scss/styles.scss"]
   },
   output: {
     path: path.resolve(__dirname, "bundledOutputs"),
@@ -19,7 +19,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(["bundledOutputs"]),
     new HtmlWebpackPlugin({
-      template: "src/index.html"
+      template: "src/assets/index.html"
     }),
     new ExtractTextPlugin("styles.css")
   ],
@@ -28,7 +28,7 @@ module.exports = {
       // Set up Reason and OCaml files to use the loader
       { test: /\.(re|ml)$/, use: "bs-loader" },
       {
-        test: /\.(css|scss)$/,
+        test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
           use: [

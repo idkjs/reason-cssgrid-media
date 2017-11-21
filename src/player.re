@@ -1,12 +1,12 @@
 let ste = ReasonReact.stringToElement;
 
-[@bs.module] external howl650 : string = "../images/howl650.jpg";
+[@bs.module] external howl650 : string = "./assets/images/howl650.jpg";
 
-[@bs.module] external howl750 : string = "../images/howl750.jpg";
+[@bs.module] external howl750 : string = "./assets/images/howl750.jpg";
 
-[@bs.module] external howl850 : string = "../images/howl850.jpg";
+[@bs.module] external howl850 : string = "./assets/images/howl850.jpg";
 
-[@bs.module] external howl950 : string = "../images/howl950.jpg";
+[@bs.module] external howl950 : string = "./assets/images/howl950.jpg";
 
 let howlsrc = {j|$howl650 ++ " 650w, " ++ $howl750 ++ " 750w, " ++ $howl850 ++ " 850w, " ++ $howl950 ++ " 950w"|j};
 

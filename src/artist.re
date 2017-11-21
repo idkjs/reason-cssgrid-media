@@ -1,16 +1,16 @@
 let ste = ReasonReact.stringToElement;
 
-[@bs.module] external andrea : string = "../images/r_andrea160.jpg";
+[@bs.module] external andrea : string = "./assets/images/r_andrea160.jpg";
 
-[@bs.module] external clara : string = "../images/r_clara160.jpg";
+[@bs.module] external clara : string = "./assets/images/r_clara160.jpg";
 
-[@bs.module] external jen : string = "../images/r_jen160.jpg";
+[@bs.module] external jen : string = "./assets/images/r_jen160.jpg";
 
-[@bs.module] external jordan : string = "../images/r_jordan160.jpg";
+[@bs.module] external jordan : string = "./assets/images/r_jordan160.jpg";
 
-[@bs.module] external rey : string = "../images/r_rey160.jpg";
+[@bs.module] external rey : string = "./assets/images/r_rey160.jpg";
 
-[@bs.module] external sally : string = "../images/r_sally160.jpg";
+[@bs.module] external sally : string = "./assets/images/r_sally160.jpg";
 
 let component = ReasonReact.statelessComponent("Artist");
 
