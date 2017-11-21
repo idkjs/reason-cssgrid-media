@@ -2,7 +2,7 @@
 
 ## Reason Experiment
 
-The audio player in player.re is just a mock up. [bs-webap](https://github.com/reasonml-community/bs-webapi-incubator) doesnt support audio controls yet so I need to figure out a way around or see about contributing to the bs-webapi project.
+The audio player in player.re is just a mock up. [bs-webapi-incubator](https://github.com/reasonml-community/bs-webapi-incubator) doesnt support audio controls yet so I need to figure out a way around or see about contributing to the bs-webapi project.
 
 
 ## TODO
