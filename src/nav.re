@@ -18,6 +18,7 @@ let make = (~router, _children) => {
         <a href="#" onClick=goToAlbum> <span className="fa fa-music" /> </a>
       </div>
       <div> <a href="#" onClick=goToArtist> <span className="fa fa-user" /> </a> </div>
+      <div> <a href="song.html"> <span className="fa fa-list" /> </a> </div>
       <div> <a href="search.html"> <span className="fa fa-search" /> </a> </div>
     </nav>
   }
