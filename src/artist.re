@@ -16,35 +16,40 @@ let component = ReasonReact.statelessComponent("Artist");
 
 let make = (~router, _children) => {
   ...component,
-  render: (_self) =>
+  render: (_self) => {
+    let goToPlayer = (event) => {
+      ReactEventRe.Mouse.preventDefault(event);
+      DirectorRe.setRoute(router, "/player")
+    };
     <div>
       <Nav router />
       <header> (ste("Artist")) </header>
       <main className="artist">
         <section>
-          <div> <a href="player.html"> <img src=andrea /> </a> </div>
+          <div> <a href="#" onClick=goToPlayer> <img src=andrea /> </a> </div>
           <div> (ste("Andrea Reys")) </div>
         </section>
         <section>
-          <div> <a href="player.html"> <img src=clara /> </a> </div>
+          <div> <a href="#" onClick=goToPlayer> <img src=clara /> </a> </div>
           <div> (ste("Brenda Bache")) </div>
         </section>
         <section>
-          <div> <a href="player.html"> <img src=jen /> </a> </div>
+          <div> <a href="#" onClick=goToPlayer> <img src=jen /> </a> </div>
           <div> (ste("Clara Stoneman")) </div>
         </section>
         <section>
-          <div> <a href="player.html"> <img src=jordan /> </a> </div>
+          <div> <a href="#" onClick=goToPlayer> <img src=jordan /> </a> </div>
           <div> (ste("Dory Jensen")) </div>
         </section>
         <section>
-          <div> <a href="player.html"> <img src=rey /> </a> </div>
+          <div> <a href="#" onClick=goToPlayer> <img src=rey /> </a> </div>
           <div> (ste("Erica Marlay")) </div>
         </section>
         <section>
-          <div> <a href="player.html"> <img src=sally /> </a> </div>
+          <div> <a href="#" onClick=goToPlayer> <img src=sally /> </a> </div>
           <div> (ste("Fanny Dylan")) </div>
         </section>
       </main>
     </div>
+  }
 };
