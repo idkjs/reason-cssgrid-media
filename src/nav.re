@@ -7,7 +7,7 @@ let make = (~router, _children) => {
   render: (_self) => {
     let goToAlbum = (event) => {
       ReactEventRe.Mouse.preventDefault(event);
-      DirectorRe.setRoute(router, "/album")
+      DirectorRe.setRoute(router, "/")
     };
     let goToArtist = (event) => {
       ReactEventRe.Mouse.preventDefault(event);
