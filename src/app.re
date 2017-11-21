@@ -1,8 +1,14 @@
-let component = ReasonReact.statelessComponent("App");
+let renderForRoute = (route, router) =>
+  ReactDOMRe.renderToElementWithId(<Body route router />, "index");
 
-let ste = ReasonReact.stringToElement;
+let router = DirectorRe.makeRouter({"/": "index", "/album": "album", "/artist": "artist"});
 
-let make = (_children) => {
-  ...component,
-  render: (_self) => <div id="wrapper"> <Header /> <Album /> <Nav /> </div>
+let handlers = {
+  "index": () => renderForRoute(Routes.Album, router),
+  "album": () => renderForRoute(Routes.Album, router),
+  "artist": () => renderForRoute(Routes.Artist, router)
 };
+
+DirectorRe.configure(router, {"html5history": true, "resource": handlers});
+
+DirectorRe.init(router, "/");

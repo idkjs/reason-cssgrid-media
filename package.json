@@ -19,6 +19,7 @@
   "author": "Alain Armand <aarmand.inbox@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "bs-director": "^0.0.5",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "reason-react": "^0.3.0"
