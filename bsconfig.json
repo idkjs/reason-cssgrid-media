@@ -7,10 +7,12 @@
   "reason": {
     "react-jsx": 2
   },
-  "bs-dependencies": ["reason-react", "bs-director"],
+  "bs-dependencies": ["reason-react", "bs-director", "bs-webapi"],
   "bsc-flags": ["-bs-super-errors"],
-  "sources": [{
-    "dir": "src"
-  }],
+  "sources": [
+    {
+      "dir": "src"
+    }
+  ],
   "refmt": 3
 }

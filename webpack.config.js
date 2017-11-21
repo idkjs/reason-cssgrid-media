@@ -74,6 +74,10 @@ module.exports = {
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: [{ loader: "file-loader" }]
+      },
+      {
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: "file-loader"
       }
     ]
   },

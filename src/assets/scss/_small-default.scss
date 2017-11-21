@@ -113,9 +113,13 @@ main.player {
   display: grid;
   grid-template-columns: 50px auto 50px;
   grid-auto-rows: auto;
-
   grid-template-areas: "photo photo photo" "time time time"
     "startTime empty endTime" "title title title" "prev play next" "dn vol up";
+
+  // template for audio html5 - not supported in reason
+  // grid-template-areas: "photo photo photo" "time time time"
+  //   "startTime empty endTime" "title title title" "prev play next" "dn vol up"
+  //   "audio audio audio";
   margin-top: 1.5rem;
 
   div.photo {
@@ -162,7 +166,11 @@ main.player {
       padding-bottom: 1rem;
     }
   }
-
+  div.audio {
+    grid-area: audio;
+    justify-self: center;
+    border-color: aqua;
+  }
   div.previous {
     grid-area: prev;
     justify-self: end;
