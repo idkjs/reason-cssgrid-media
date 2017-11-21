@@ -1,8 +1,8 @@
 {
-  "name": "with-reason-cssgrid-music",
+  "name": "with-reason-cssgrid-media",
   "private": true,
   "version": "0.1.0",
-  "description": "css-grid images with reasonml demo",
+  "description": "css-grid images and audio with reasonml demo",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
@@ -10,14 +10,9 @@
     "clean": "bsb -clean-world",
     "prepare": "npm link bs-platform"
   },
-  "keywords": [
-    "reason",
-    "css-grid",
-    "reason-react",
-    "sass"
-  ],
+  "keywords": ["reason", "css-grid", "reason-react", "sass", "media files"],
   "author": "Alain Armand <aarmand.inbox@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bs-director": "^0.0.5",
     "bs-webapi": "^0.7.0",
@@ -37,7 +32,6 @@
     "node-sass": "^4.7.1",
     "postcss-loader": "^2.0.8",
     "sass-loader": "^6.0.6",
-    "srcset-loader": "^2.2.2",
     "style-loader": "^0.19.0",
     "url-loader": "^0.6.2",
     "webpack": "^3.8.1",
