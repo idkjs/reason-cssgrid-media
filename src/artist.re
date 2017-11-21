@@ -19,6 +19,7 @@ let make = (~router, _children) => {
   render: (_self) =>
     <div>
       <Nav router />
+      <header> (ste("Artist")) </header>
       <main className="artist">
         <section>
           <div> <a href="player.html"> <img src=andrea /> </a> </div>

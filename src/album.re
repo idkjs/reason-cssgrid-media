@@ -38,6 +38,7 @@ let make = (~router, _children) => {
   ...component,
   render: (_self) =>
     <div>
+      <header> (ste("Album")) </header>
       <Nav router />
       <main className="album">
         <figure>
